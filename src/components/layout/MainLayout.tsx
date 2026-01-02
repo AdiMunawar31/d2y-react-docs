@@ -16,6 +16,8 @@ export function MainLayout({ mesh = "homepage" }: MainLayoutProps) {
         meshBackgroundMap[mesh]
       )}
     >
+      <div className="blob bg-primary w-125 h-125 top-[10%] left-[20%] -translate-x-1/2"></div>
+      <div className="blob bg-purple-600 w-100 h-100 bottom-[10%] right-[20%] translate-x-1/2"></div>
       <GlassNavbar />
 
       <main className="relative z-10 px-8 pt-8 pb-24">

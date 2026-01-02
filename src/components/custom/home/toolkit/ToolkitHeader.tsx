@@ -1,4 +1,6 @@
+import { ROUTES } from "@/lib/constants/routes";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function ToolkitHeader() {
   return (
@@ -13,13 +15,13 @@ export function ToolkitHeader() {
         </p>
       </div>
 
-      <a
-        href="#"
+      <Link
+        to={ROUTES.TOOLS}
         className="text-primary hover:text-primary-dark font-medium flex items-center gap-1 transition-colors"
       >
         View all tools
         <ArrowRight size={18} />
-      </a>
+      </Link>
     </div>
   );
 }

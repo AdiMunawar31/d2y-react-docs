@@ -2,7 +2,7 @@ import { ComponentLibrarySection } from "@/components/custom/home/component-libr
 import { HeroSection } from "@/components/custom/home/hero/HeroSection";
 import { DeveloperToolkitSection } from "@/components/custom/home/toolkit/DeveloperToolkitSection";
 
-export function HomePage() {
+export default function HomePage() {
   return (
     <>
       <HeroSection />

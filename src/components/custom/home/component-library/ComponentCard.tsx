@@ -1,13 +1,10 @@
-import { Copy, Eye } from "lucide-react";
-
 import { type LibraryComponent } from "@/data/component-library";
-import { ComponentActionButton } from "./ComponentActionButton";
 import { ComponentPreview } from "./ComponentPreview";
 import { ComponentTag } from "./ComponentTag";
 
 export function ComponentCard({ item }: { item: LibraryComponent }) {
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-glass-border bg-card-bg hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10">
+    <div className="group cursor-pointer relative flex flex-col overflow-hidden rounded-2xl border border-glass-border bg-card-bg hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10">
       <div
         className="aspect-4/3 w-full relative flex items-center justify-center p-6"
         style={{
@@ -16,11 +13,6 @@ export function ComponentCard({ item }: { item: LibraryComponent }) {
         }}
       >
         <ComponentPreview type={item.previewType} />
-
-        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3 backdrop-blur-sm">
-          <ComponentActionButton icon={Eye} />
-          <ComponentActionButton icon={Copy} primary />
-        </div>
       </div>
 
       <div className="p-4 bg-card-bg border-t border-white/5">

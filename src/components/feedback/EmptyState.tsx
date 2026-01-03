@@ -15,7 +15,7 @@ export const EmptyState = ({
   onBack,
 }: EmptyStateProps) => {
   return (
-    <div className="flex flex-1 items-center justify-center py-20 px-4 mt-16">
+    <div className="flex flex-1 items-center justify-center py-20 px-4 mt-8">
       <motion.div
         initial={{ opacity: 0, y: 24, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}

@@ -7,25 +7,25 @@ export function ToolsHero() {
         <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
           Tools Explorer
         </h2>
-        <p className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl">
+        <p className="text-lg text-slate-400 max-w-2xl">
           Discover utilities, converters, and advanced developer tools to
           streamline your workflow.
         </p>
       </div>
 
-      <div className="w-full max-w-2xl">
-        <div className="relative group">
-          <Search
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary"
-            size={20}
-          />
-          <input
-            className="w-full pl-12 pr-16 py-4 rounded-xl bg-white dark:bg-[#1e293b] ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-2 focus:ring-primary text-slate-900 dark:text-white placeholder:text-slate-400 transition-all"
-            placeholder="Search tools, utilities, converters..."
-          />
-          <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded border border-slate-200 dark:border-slate-600">
+      <div className="relative hidden sm:block group w-full max-w-xl">
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
+          <Search size={16} />
+        </div>
+        <input
+          type="text"
+          placeholder="Search..."
+          className="block w-full rounded-xl border border-glass-border bg-white/5 py-2 pl-10 pr-4 text-sm text-white placeholder-slate-400 focus:border-primary focus:bg-white/10 focus:ring-1 focus:ring-primary outline-none transition-all"
+        />
+        <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+          <kbd className="hidden lg:inline-flex h-5 items-center gap-1 rounded border border-glass-border bg-white/5 px-1.5 font-mono text-[10px] font-medium text-slate-400">
             ⌘ K
-          </span>
+          </kbd>
         </div>
       </div>
     </section>

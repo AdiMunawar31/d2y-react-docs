@@ -1,6 +1,11 @@
 import { Search } from "lucide-react";
 
-export function ToolsHero() {
+interface ToolsHeroProps {
+  search: string;
+  onSearch: (v: string) => void;
+}
+
+export function ToolsHero({ search, onSearch }: ToolsHeroProps) {
   return (
     <section className="flex flex-col gap-6 pt-4 pb-8">
       <div>
@@ -18,8 +23,10 @@ export function ToolsHero() {
           <Search size={16} />
         </div>
         <input
+          value={search}
+          onChange={(e) => onSearch(e.target.value)}
           type="text"
-          placeholder="Search..."
+          placeholder="Search tools..."
           className="block w-full rounded-xl border border-glass-border bg-white/5 py-2 pl-10 pr-4 text-sm text-white placeholder-slate-400 focus:border-primary focus:bg-white/10 focus:ring-1 focus:ring-primary outline-none transition-all"
         />
         <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">

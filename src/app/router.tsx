@@ -10,6 +10,10 @@ import ComponentExplorerPage from "@/pages/ComponentExplorerPage";
 const HomePage = lazy(() => import("@/pages/HomePage"));
 const ToolsExplorerPage = lazy(() => import("@/pages/ToolsExplorerPage"));
 
+const ColorPickerPage = lazy(
+  () => import("@/pages/tools-explorer/ColorPickerPage")
+);
+
 export const router = createBrowserRouter([
   {
     element: <MainLayout />,
@@ -36,6 +40,15 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<LoadingState />}>
             <ComponentExplorerPage />
+          </Suspense>
+        ),
+      },
+      // TOOLS -------------------------------------------
+      {
+        path: ROUTES.COLOR_PICKER,
+        element: (
+          <Suspense fallback={<LoadingState />}>
+            <ColorPickerPage />
           </Suspense>
         ),
       },

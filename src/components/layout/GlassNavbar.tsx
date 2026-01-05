@@ -16,9 +16,7 @@ export function GlassNavbar() {
             <div className="flex items-center justify-center size-8 rounded-lg bg-primary/20 text-primary ring-1 ring-primary/30 shadow-[0_0_15px_rgba(43,140,238,0.3)]">
               <Atom size={18} />
             </div>
-            <h2 className="text-lg font-bold tracking-tight">
-              Liquid Glass UI
-            </h2>
+            <h2 className="text-lg font-bold tracking-tight">D2Y React Docs</h2>
           </NavLink>
 
           <nav className="hidden md:flex items-center gap-6">

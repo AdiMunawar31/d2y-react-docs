@@ -1,17 +1,27 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, type JSX } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
 import { MainLayout } from "@/components/layout/MainLayout";
 import { ROUTES } from "@/lib/constants/routes";
 import { NotFoundState } from "@/components/feedback/NotFoundState";
 import { LoadingState } from "@/components/feedback/LoadingState";
-import ComponentExplorerPage from "@/pages/ComponentExplorerPage";
 
 const HomePage = lazy(() => import("@/pages/HomePage"));
 const ToolsExplorerPage = lazy(() => import("@/pages/ToolsExplorerPage"));
+const ComponentExplorerPage = lazy(
+  () => import("@/pages/ComponentExplorerPage")
+);
 
+// TOOLS
 const ColorPickerPage = lazy(
   () => import("@/pages/tools-explorer/ColorPickerPage")
+);
+const HtmlToJsxPage = lazy(
+  () => import("@/pages/tools-explorer/HtmlToJsxPage")
+);
+
+const withSuspense = (element: JSX.Element) => (
+  <Suspense fallback={<LoadingState />}>{element}</Suspense>
 );
 
 export const router = createBrowserRouter([
@@ -21,36 +31,30 @@ export const router = createBrowserRouter([
     children: [
       {
         path: ROUTES.HOME,
-        element: (
-          <Suspense fallback={<LoadingState />}>
-            <HomePage />
-          </Suspense>
-        ),
-      },
-      {
-        path: ROUTES.TOOLS,
-        element: (
-          <Suspense fallback={<LoadingState />}>
-            <ToolsExplorerPage />
-          </Suspense>
-        ),
+        element: withSuspense(<HomePage />),
       },
       {
         path: ROUTES.COMPONENTS,
-        element: (
-          <Suspense fallback={<LoadingState />}>
-            <ComponentExplorerPage />
-          </Suspense>
-        ),
+        element: withSuspense(<ComponentExplorerPage />),
       },
-      // TOOLS -------------------------------------------
+
+      // TOOLS PARENT
       {
-        path: ROUTES.COLOR_PICKER,
-        element: (
-          <Suspense fallback={<LoadingState />}>
-            <ColorPickerPage />
-          </Suspense>
-        ),
+        path: ROUTES.TOOLS,
+        children: [
+          {
+            index: true,
+            element: withSuspense(<ToolsExplorerPage />),
+          },
+          {
+            path: ROUTES.COLOR_PICKER,
+            element: withSuspense(<ColorPickerPage />),
+          },
+          {
+            path: ROUTES.HTML_TO_JSX,
+            element: withSuspense(<HtmlToJsxPage />),
+          },
+        ],
       },
     ],
   },

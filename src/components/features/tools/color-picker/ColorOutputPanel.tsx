@@ -1,4 +1,4 @@
-import { rgbToHsl } from "@/utils/color";
+import { rgbToHsl } from "@/utils/tools/colors/color";
 import type { RGB } from "@/lib/interfaces/color";
 import { Copy } from "lucide-react";
 import { D2YToast } from "@/components/base/D2YToast";

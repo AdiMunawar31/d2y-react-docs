@@ -1,5 +1,10 @@
 import { useCallback, useMemo, useState } from "react";
-import { hsvToRgb, rgbToHex, hexToRgb, rgbToHsv } from "@/utils/color";
+import {
+  hsvToRgb,
+  rgbToHex,
+  hexToRgb,
+  rgbToHsv,
+} from "@/utils/tools/colors/color";
 
 export function useColorPicker() {
   const [hsv, setHsv] = useState({ h: 210, s: 0.66, v: 0.55 });

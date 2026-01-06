@@ -35,18 +35,30 @@ export interface ToolItem {
   icon: React.ElementType;
   gradient: string;
   iconColor: string;
+  path: string;
 }
 
 export const TOOLS: ToolItem[] = [
   {
-    id: "color-converter",
-    title: "Color Converter",
+    id: "html-to-jsx",
+    title: "HTML to JSX",
+    description: "Convert raw HTML into clean JSX components.",
+    category: "Dev",
+    icon: Code2,
+    gradient: "from-indigo-500/20 to-blue-500/20",
+    iconColor: "text-indigo-400 border-indigo-500/30",
+    path: "html-to-jsx",
+  },
+  {
+    id: "color-picker",
+    title: "Color Picker",
     description:
       "Convert HEX to RGB, HSL, and CMYK instantly with live preview.",
     category: "Color",
     icon: Palette,
     gradient: "from-pink-500/20 to-rose-500/20",
     iconColor: "text-pink-400 border-pink-500/30",
+    path: "color-picker",
   },
   {
     id: "json-formatter",
@@ -56,6 +68,7 @@ export const TOOLS: ToolItem[] = [
     icon: Database,
     gradient: "from-blue-500/20 to-cyan-500/20",
     iconColor: "text-blue-400 border-blue-500/30",
+    path: "json-formatter",
   },
   {
     id: "contrast-checker",
@@ -65,6 +78,7 @@ export const TOOLS: ToolItem[] = [
     icon: Contrast,
     gradient: "from-emerald-500/20 to-green-500/20",
     iconColor: "text-emerald-400 border-emerald-500/30",
+    path: "contrast-checker",
   },
   {
     id: "flexbox-generator",
@@ -74,6 +88,7 @@ export const TOOLS: ToolItem[] = [
     icon: LayoutGrid,
     gradient: "from-purple-500/20 to-indigo-500/20",
     iconColor: "text-purple-400 border-purple-500/30",
+    path: "flexbox-generator",
   },
   {
     id: "qr-generator",
@@ -83,6 +98,7 @@ export const TOOLS: ToolItem[] = [
     icon: QrCode,
     gradient: "from-amber-500/20 to-orange-500/20",
     iconColor: "text-amber-400 border-amber-500/30",
+    path: "qr-generator",
   },
   {
     id: "unix-timestamp",
@@ -92,6 +108,7 @@ export const TOOLS: ToolItem[] = [
     icon: Clock,
     gradient: "from-sky-500/20 to-blue-500/20",
     iconColor: "text-sky-400 border-sky-500/30",
+    path: "unix-timestamp",
   },
   {
     id: "regex-tester",
@@ -101,6 +118,7 @@ export const TOOLS: ToolItem[] = [
     icon: Regex,
     gradient: "from-red-500/20 to-orange-500/20",
     iconColor: "text-red-400 border-red-500/30",
+    path: "regex-tester",
   },
   {
     id: "image-compressor",
@@ -110,6 +128,7 @@ export const TOOLS: ToolItem[] = [
     icon: ImageIcon,
     gradient: "from-teal-500/20 to-cyan-500/20",
     iconColor: "text-teal-400 border-teal-500/30",
+    path: "image-compressor",
   },
   {
     id: "markdown-preview",
@@ -119,6 +138,7 @@ export const TOOLS: ToolItem[] = [
     icon: FileText,
     gradient: "from-slate-500/20 to-gray-500/20",
     iconColor: "text-slate-400 border-slate-500/30",
+    path: "markdown-preview",
   },
   {
     id: "code-formatter",
@@ -128,6 +148,7 @@ export const TOOLS: ToolItem[] = [
     icon: Code2,
     gradient: "from-indigo-500/20 to-blue-500/20",
     iconColor: "text-indigo-400 border-indigo-500/30",
+    path: "code-formatter",
   },
   {
     id: "calculator",
@@ -137,6 +158,7 @@ export const TOOLS: ToolItem[] = [
     icon: Calculator,
     gradient: "from-lime-500/20 to-green-500/20",
     iconColor: "text-lime-400 border-lime-500/30",
+    path: "calculator",
   },
   {
     id: "text-counter",
@@ -146,6 +168,7 @@ export const TOOLS: ToolItem[] = [
     icon: Type,
     gradient: "from-fuchsia-500/20 to-pink-500/20",
     iconColor: "text-fuchsia-400 border-fuchsia-500/30",
+    path: "text-counter",
   },
   {
     id: "image-cropper",
@@ -155,6 +178,7 @@ export const TOOLS: ToolItem[] = [
     icon: Crop,
     gradient: "from-yellow-500/20 to-amber-500/20",
     iconColor: "text-yellow-400 border-yellow-500/30",
+    path: "image-cropper",
   },
   {
     id: "json-diff",
@@ -164,6 +188,7 @@ export const TOOLS: ToolItem[] = [
     icon: Braces,
     gradient: "from-rose-500/20 to-red-500/20",
     iconColor: "text-rose-400 border-rose-500/30",
+    path: "json-diff",
   },
   {
     id: "url-encoder",
@@ -173,6 +198,7 @@ export const TOOLS: ToolItem[] = [
     icon: Globe,
     gradient: "from-cyan-500/20 to-sky-500/20",
     iconColor: "text-cyan-400 border-cyan-500/30",
+    path: "url-encoder",
   },
   {
     id: "css-generator",
@@ -182,6 +208,7 @@ export const TOOLS: ToolItem[] = [
     icon: Wand2,
     gradient: "from-violet-500/20 to-purple-500/20",
     iconColor: "text-violet-400 border-violet-500/30",
+    path: "css-generator",
   },
   {
     id: "uuid-generator",
@@ -191,6 +218,7 @@ export const TOOLS: ToolItem[] = [
     icon: Braces,
     gradient: "from-neutral-500/20 to-slate-500/20",
     iconColor: "text-neutral-400 border-neutral-500/30",
+    path: "uuid-generator",
   },
   {
     id: "base64-tool",
@@ -200,6 +228,7 @@ export const TOOLS: ToolItem[] = [
     icon: Code2,
     gradient: "from-orange-500/20 to-amber-500/20",
     iconColor: "text-orange-400 border-orange-500/30",
+    path: "base64-tool",
   },
   {
     id: "jwt-decoder",
@@ -209,6 +238,7 @@ export const TOOLS: ToolItem[] = [
     icon: FileText,
     gradient: "from-indigo-500/20 to-violet-500/20",
     iconColor: "text-indigo-400 border-indigo-500/30",
+    path: "jwt-decoder",
   },
   {
     id: "cron-parser",
@@ -218,5 +248,6 @@ export const TOOLS: ToolItem[] = [
     icon: Clock,
     gradient: "from-sky-500/20 to-cyan-500/20",
     iconColor: "text-sky-400 border-sky-500/30",
+    path: "cron-parser",
   },
 ];

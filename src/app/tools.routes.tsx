@@ -13,6 +13,9 @@ const HtmlToJsxPage = lazy(
 const WcagContrastPage = lazy(
   () => import("@/pages/tools-explorer/WcagContrastPage")
 );
+const JsonFormatterPage = lazy(
+  () => import("@/pages/tools-explorer/JsonFormatterPage")
+);
 
 const withSuspense = (element: JSX.Element) => (
   <Suspense fallback={<LoadingState />}>{element}</Suspense>
@@ -36,6 +39,10 @@ export const toolsRoutes: RouteObject = {
     {
       path: ROUTES.CONTRAST_CHECKER,
       element: withSuspense(<WcagContrastPage />),
+    },
+    {
+      path: ROUTES.JSON_FORMATTER,
+      element: withSuspense(<JsonFormatterPage />),
     },
   ],
 };

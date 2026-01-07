@@ -10,6 +10,9 @@ const ColorPickerPage = lazy(
 const HtmlToJsxPage = lazy(
   () => import("@/pages/tools-explorer/HtmlToJsxPage")
 );
+const WcagContrastPage = lazy(
+  () => import("@/pages/tools-explorer/WcagContrastPage")
+);
 
 const withSuspense = (element: JSX.Element) => (
   <Suspense fallback={<LoadingState />}>{element}</Suspense>
@@ -29,6 +32,10 @@ export const toolsRoutes: RouteObject = {
     {
       path: ROUTES.HTML_TO_JSX,
       element: withSuspense(<HtmlToJsxPage />),
+    },
+    {
+      path: ROUTES.CONTRAST_CHECKER,
+      element: withSuspense(<WcagContrastPage />),
     },
   ],
 };

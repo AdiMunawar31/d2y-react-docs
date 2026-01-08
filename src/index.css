@@ -267,3 +267,35 @@
     #ff0000 100%
   );
 }
+
+.calculator-glass-button {
+  @apply bg-white/5 hover:bg-white/10 active:bg-white/15 
+         text-white border border-white/10 
+         transition-all duration-200 
+         hover:shadow-lg hover:shadow-white/5;
+}
+
+.calculator-glass-button-primary {
+  @apply bg-primary/20 hover:bg-primary/30 active:bg-primary/40 
+         text-primary border border-primary/30 
+         hover:shadow-lg hover:shadow-primary/20;
+}
+
+.calculator-glass-button-secondary {
+  @apply bg-secondary/20 hover:bg-secondary/30 active:bg-secondary/40 
+         text-white border border-secondary/30;
+}
+
+.calculator-glass-button-func {
+  @apply bg-blue-500/10 hover:bg-blue-500/20 
+         text-blue-300 border border-blue-500/20;
+}
+
+.calculator-glass-button-danger {
+  @apply bg-red-500/20 hover:bg-red-500/30 
+         text-red-300 border border-red-500/30;
+}
+
+.shadow-neon {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}

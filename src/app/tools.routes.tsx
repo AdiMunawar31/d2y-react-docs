@@ -4,6 +4,7 @@ import { LoadingState } from "@/components/feedback/LoadingState";
 import { ROUTES } from "@/lib/constants/routes";
 
 const ToolsExplorerPage = lazy(() => import("@/pages/ToolsExplorerPage"));
+
 const ColorPickerPage = lazy(
   () => import("@/pages/tools-explorer/ColorPickerPage")
 );
@@ -15,6 +16,9 @@ const WcagContrastPage = lazy(
 );
 const JsonFormatterPage = lazy(
   () => import("@/pages/tools-explorer/JsonFormatterPage")
+);
+const CalculatorPage = lazy(
+  () => import("@/pages/tools-explorer/CalculatorPage")
 );
 
 const withSuspense = (element: JSX.Element) => (
@@ -43,6 +47,10 @@ export const toolsRoutes: RouteObject = {
     {
       path: ROUTES.JSON_FORMATTER,
       element: withSuspense(<JsonFormatterPage />),
+    },
+    {
+      path: ROUTES.CALCULATOR,
+      element: withSuspense(<CalculatorPage />),
     },
   ],
 };

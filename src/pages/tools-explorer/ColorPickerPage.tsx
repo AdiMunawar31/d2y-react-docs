@@ -19,7 +19,7 @@ export default function ColorPickerPage() {
   } = useColorPicker();
 
   return (
-    <main className="px-8 py-8 mt-8">
+    <main className="px-8 py-8 -mt-4">
       <div className="grid grid-cols-12 gap-6">
         {/* LEFT SIDE */}
         <section className="col-span-12 sm:col-span-9">

@@ -22,8 +22,8 @@ export default function WcagContrastPage() {
   } = useWcagContrast();
 
   return (
-    <main className="flex-1 flex justify-center py-10 px-4 sm:px-6 lg:px-8 mt-16">
-      <div className="w-full max-w-300 flex flex-col gap-8">
+    <main className="flex-1 flex justify-center py-4 px-8">
+      <div className="w-full flex flex-col gap-8">
         <WcagHeader />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">

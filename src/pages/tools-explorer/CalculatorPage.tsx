@@ -37,7 +37,7 @@ export default function CalculatorPage() {
   } = useCalculator();
 
   return (
-    <main className="grow flex items-center justify-center p-4 md:p-6 lg:p-8 mt-16">
+    <main className="grow flex items-center justify-center p-4 md:p-6 lg:p-8">
       <div className="flex flex-col xl:flex-row gap-6 max-w-350 w-full">
         <div className="flex flex-col flex-1 glass-panel rounded-2xl shadow-2xl relative border border-white/10">
           <div className="absolute top-[-10%] right-[-10%] w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />

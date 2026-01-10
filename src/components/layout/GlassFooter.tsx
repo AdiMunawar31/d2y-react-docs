@@ -47,7 +47,7 @@ export function GlassFooter() {
         <div className="h-px w-full bg-white/5"></div>
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <p>
-            © {new Date().getFullYear()} Liquid Glass UI. All rights reserved.
+            © {new Date().getFullYear()} D2Y REACT DOCS. All rights reserved.
           </p>
           <p>Designed by D2Y Developers.</p>
         </div>

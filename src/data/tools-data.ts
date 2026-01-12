@@ -15,6 +15,7 @@ import {
   Braces,
   Globe,
   Wand2,
+  Radius,
 } from "lucide-react";
 
 export type ToolCategory =
@@ -79,6 +80,17 @@ export const TOOLS: ToolItem[] = [
     gradient: "from-emerald-500/20 to-green-500/20",
     iconColor: "text-emerald-400 border-emerald-500/30",
     path: "contrast-checker",
+  },
+  {
+    id: "spin-wheel",
+    title: "Spin Wheel",
+    description:
+      "Randomly select a winner from your list with our vibrant generator.",
+    category: "Dev",
+    icon: Radius,
+    gradient: "from-emerald-500/20 to-green-500/20",
+    iconColor: "text-emerald-400 border-emerald-500/30",
+    path: "spin-wheel",
   },
   {
     id: "flexbox-generator",

@@ -21,6 +21,9 @@ const JsonFormatterPage = lazy(
 const CalculatorPage = lazy(
   () => import("@/pages/tools-explorer/CalculatorPage")
 );
+const SpinWheelPage = lazy(
+  () => import("@/pages/tools-explorer/SpinWheelPage")
+);
 
 const withSuspense = (element: JSX.Element) => (
   <Suspense fallback={<LoadingState />}>{element}</Suspense>
@@ -55,6 +58,10 @@ export const toolsRoutes: RouteObject = {
         {
           path: ROUTES.CALCULATOR,
           element: withSuspense(<CalculatorPage />),
+        },
+        {
+          path: ROUTES.SPIN_WHEEL,
+          element: withSuspense(<SpinWheelPage />),
         },
       ],
     },

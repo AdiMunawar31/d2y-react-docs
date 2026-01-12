@@ -299,3 +299,83 @@
 .shadow-neon {
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
 }
+
+/* Wheel Segment Animation */
+.wheel-segment {
+  transform-origin: center;
+}
+
+/* Toggle Checkbox */
+.toggle-checkbox:checked {
+  right: 0;
+  border-color: #0ea5e9;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #0ea5e9;
+}
+
+/* Animation Delays */
+.delay-75 {
+  animation-delay: 75ms;
+}
+
+.delay-150 {
+  animation-delay: 150ms;
+}
+
+/* Spin Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-idle {
+  animation: spin-slow 30s linear infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.35s ease-out;
+}

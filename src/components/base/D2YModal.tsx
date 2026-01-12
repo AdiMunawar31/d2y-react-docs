@@ -1,24 +1,56 @@
-import * as DialogPrimitive from "@radix-ui/react-dialog";
+"use client";
+
+import * as React from "react";
 import { cn } from "@/lib/utils";
+import {
+  Dialog,
+  DialogContent,
+  DialogOverlay,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
-export const D2YModal = DialogPrimitive.Root;
-export const D2YModalTrigger = DialogPrimitive.Trigger;
+interface D2YModalProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  children: React.ReactNode;
+  className?: string;
+  overlayClassName?: string;
+  hideCloseButton?: boolean;
+}
 
-export const D2YModalOverlay = () => (
-  <DialogPrimitive.Overlay className="fixed inset-0 bg-black/40 backdrop-blur-xl" />
-);
-
-export const D2YModalContent = ({
+export function D2YModal({
+  open,
+  onOpenChange,
+  children,
   className,
-  ...props
-}: DialogPrimitive.DialogContentProps) => (
-  <DialogPrimitive.Content
-    className={cn(
-      "fixed left-1/2 top-1/2 z-50 w-full max-w-lg -translate-x-1/2 -translate-y-1/2",
-      "backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-6",
-      "animate-in fade-in zoom-in-95",
-      className
-    )}
-    {...props}
-  />
-);
+  overlayClassName,
+  hideCloseButton = false,
+}: D2YModalProps) {
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogOverlay
+        className={cn(
+          "fixed inset-0 z-50 bg-black/30 backdrop-blur-sm",
+          overlayClassName
+        )}
+      />
+
+      <DialogContent
+        className={cn(
+          "z-50 rounded-3xl border border-white/10 bg-slate-900 shadow-2xl",
+          "data-[state=open]:animate-scale-in",
+          className
+        )}
+      >
+        <VisuallyHidden>
+          <DialogTitle>Modal</DialogTitle>
+          <DialogDescription>Dialog content</DialogDescription>
+        </VisuallyHidden>
+
+        {children}
+      </DialogContent>
+    </Dialog>
+  );
+}

@@ -1,6 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
+import "./lib/styles/qr-generator-styles.css";
+
 import App from "./app/App.tsx";
 import { Toaster } from "sonner";
 

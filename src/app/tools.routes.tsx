@@ -24,6 +24,9 @@ const CalculatorPage = lazy(
 const SpinWheelPage = lazy(
   () => import("@/pages/tools-explorer/SpinWheelPage")
 );
+const QRGeneratorPage = lazy(
+  () => import("@/pages/tools-explorer/QRGeneratorPage")
+);
 
 const withSuspense = (element: JSX.Element) => (
   <Suspense fallback={<LoadingState />}>{element}</Suspense>
@@ -62,6 +65,10 @@ export const toolsRoutes: RouteObject = {
         {
           path: ROUTES.SPIN_WHEEL,
           element: withSuspense(<SpinWheelPage />),
+        },
+        {
+          path: ROUTES.QR_GENERATOR,
+          element: withSuspense(<QRGeneratorPage />),
         },
       ],
     },

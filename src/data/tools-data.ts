@@ -16,6 +16,7 @@ import {
   Globe,
   Wand2,
   Radius,
+  KeyRound,
 } from "lucide-react";
 
 export type ToolCategory =
@@ -101,6 +102,16 @@ export const TOOLS: ToolItem[] = [
     gradient: "from-purple-500/20 to-indigo-500/20",
     iconColor: "text-purple-400 border-purple-500/30",
     path: "flexbox-generator",
+  },
+  {
+    id: "password-generator",
+    title: "Password Generator",
+    description: "Is a tool that creates unique, complex, and random passwords",
+    category: "Dev",
+    icon: KeyRound,
+    gradient: "from-blue-500/20 to-indigo-500/20",
+    iconColor: "text-blue-400 border-blue-500/30",
+    path: "password-generator",
   },
   {
     id: "qr-generator",

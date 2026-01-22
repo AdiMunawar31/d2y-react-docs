@@ -27,6 +27,7 @@ export const ROUTES = {
   JWT_DECODER: "jwt-decoder",
   CRON_PARSER: "cron-parser",
   SPIN_WHEEL: "spin-wheel",
+  PASSWORD_GENERATOR: "password-generator",
 } as const;
 
 export type AppRoute = (typeof ROUTES)[keyof typeof ROUTES];

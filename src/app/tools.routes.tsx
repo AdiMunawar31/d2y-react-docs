@@ -27,6 +27,9 @@ const SpinWheelPage = lazy(
 const QRGeneratorPage = lazy(
   () => import("@/pages/tools-explorer/QRGeneratorPage")
 );
+const PasswordGeneratorPage = lazy(
+  () => import("@/pages/tools-explorer/PasswordGeneratorPage")
+);
 
 const withSuspense = (element: JSX.Element) => (
   <Suspense fallback={<LoadingState />}>{element}</Suspense>
@@ -69,6 +72,10 @@ export const toolsRoutes: RouteObject = {
         {
           path: ROUTES.QR_GENERATOR,
           element: withSuspense(<QRGeneratorPage />),
+        },
+        {
+          path: ROUTES.PASSWORD_GENERATOR,
+          element: withSuspense(<PasswordGeneratorPage />),
         },
       ],
     },

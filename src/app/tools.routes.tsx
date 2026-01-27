@@ -30,6 +30,9 @@ const QRGeneratorPage = lazy(
 const PasswordGeneratorPage = lazy(
   () => import("@/pages/tools-explorer/PasswordGeneratorPage")
 );
+const TimestampConverterPage = lazy(
+  () => import("@/pages/tools-explorer/TimestampConverterPage")
+);
 
 const withSuspense = (element: JSX.Element) => (
   <Suspense fallback={<LoadingState />}>{element}</Suspense>
@@ -76,6 +79,10 @@ export const toolsRoutes: RouteObject = {
         {
           path: ROUTES.PASSWORD_GENERATOR,
           element: withSuspense(<PasswordGeneratorPage />),
+        },
+        {
+          path: ROUTES.UNIX_TIMESTAMP,
+          element: withSuspense(<TimestampConverterPage />),
         },
       ],
     },

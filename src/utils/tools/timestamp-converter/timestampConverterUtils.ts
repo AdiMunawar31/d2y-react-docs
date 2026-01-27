@@ -150,7 +150,7 @@ export function getMilestones(): Milestone[] {
   const newYear2027 = new Date("2027-01-01T00:00:00Z");
 
   // Y2K38 (Unix 32-bit overflow)
-  const y2k38 = new Date("2038-01-19T03:14:07Z");
+  // const y2k38 = new Date("2038-01-19T03:14:07Z");
 
   return [
     {
@@ -166,7 +166,7 @@ export function getMilestones(): Milestone[] {
     {
       id: "y2k38",
       label: "Y2K38 Overflow",
-      timestamp: 2147483647, // Max 32-bit signed integer
+      timestamp: 2147483647,
       isWarning: true,
     },
   ];
